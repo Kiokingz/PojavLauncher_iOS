@@ -28,8 +28,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Remove work folders
-        env:
-          password: ${{ secrets.ELLIE_MINI_SECRET }}
         run: |
           echo "before"
           ls -lah ./
