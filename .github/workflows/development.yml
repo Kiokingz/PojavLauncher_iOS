@@ -86,7 +86,11 @@ jobs:
           git add Natives/resources/Frameworks/libgl4es_114.dylib
           git commit -am "CI: Update gl4es"
           git push
-          
+
+      - name: get gmake and ldid because github macos runners does not have it
+        run: |
+          brew install make ldid
+
       - name: Get JRE8
         uses: dawidd6/action-download-artifact@v2
         with:
