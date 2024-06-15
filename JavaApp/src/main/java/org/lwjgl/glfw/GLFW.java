@@ -1007,6 +1007,9 @@ public class GLFW
         if (height != null) height.put(internalGetWindow(window).height);
     }
 
+    public static void glfwSetWindowSizeLimits(@NativeType("GLFWwindow *") long window, int minwidth, int minheight, int maxwidth, int maxheight) {
+    }
+
     public static void glfwSetWindowPos(long window, int x, int y) {
         internalGetWindow(window).x = x;
         internalGetWindow(window).y = y;
@@ -1203,7 +1206,7 @@ public class GLFW
         return false;
     }
     public static String glfwGetGamepadName(int jid) {
-        return null;
+        return "Unknown";
     }
     public static boolean glfwGetGamepadState(int jid, GLFWGamepadState state) {
         return false;
