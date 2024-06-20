@@ -85,9 +85,10 @@ jobs:
           git commit -am "CI: Update gl4es"
           git push
 
-      - name: get gmake and ldid because github macos runners does not have it
+      - name: get necessary dependencies
         run: |
           brew install make ldid
+          brew install openjdk@8
 
       - name: Get JRE8
         uses: dawidd6/action-download-artifact@v2
